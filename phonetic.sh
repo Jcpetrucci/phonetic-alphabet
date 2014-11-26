@@ -1,0 +1,33 @@
+#!/bin/bash
+while read -sn1 x; do 
+#clear;
+echo $x | grep -qEi "[a-z]" ||  exit 1
+cat <<EOF | grep -iE "^$x"
+ALPHA
+BRAVO
+CHARLIE
+DELTA
+ECHO
+FOXTROT
+GOLF
+HOTEL
+INDIA
+JULIET
+KILO
+LIMA
+MIKE
+NOVEMBER
+OSCAR
+PAPA
+QUEBEC
+ROMEO
+SIERRA
+TANGO
+UNIFORM
+VICTOR
+WHISKEY
+X-RAY
+YANKEE
+ZULU
+EOF
+done
